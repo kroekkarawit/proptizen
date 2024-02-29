@@ -108,7 +108,7 @@ const FooterSecondary = () => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g clip-path="url(#clip0_572_1219)">
+            <g clipPath="url(#clip0_572_1219)">
               <path
                 d="M32 18C32 10.268 25.732 4 18 4C10.268 4 4 10.268 4 18C4 24.9877 9.11957 30.7796 15.8125 31.8299V22.0469H12.2578V18H15.8125V14.9156C15.8125 11.4069 17.9027 9.46875 21.1005 9.46875C22.6318 9.46875 24.2344 9.74219 24.2344 9.74219V13.1875H22.4691C20.73 13.1875 20.1875 14.2668 20.1875 15.375V18H24.0703L23.4496 22.0469H20.1875V31.8299C26.8804 30.7796 32 24.9877 32 18Z"
                 fill="#FFFCFA"
@@ -132,7 +132,7 @@ const FooterSecondary = () => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g clip-path="url(#clip0_572_1222)">
+            <g clipPath="url(#clip0_572_1222)">
               <path
                 fill-rule="evenodd"
                 clip-rule="evenodd"
