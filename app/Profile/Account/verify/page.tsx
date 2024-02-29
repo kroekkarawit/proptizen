@@ -107,6 +107,9 @@ const Verify = () => {
                   <input
                     type="text"
                     placeholder="Fill your Thai National ID number"
+                    maxLength={12}
+                    value={thaiNationalIdNumber || ""}
+                    onChange={(e) => setThaiNationalIdNumber(e.target.value)}
                     className="mt-1 border boder-[#E0E0E0] rounded-xl h-12 max-w-[360px] placeholder:text-[#9E9E9E] placeholder:text-base  placeholder:font-normal p-2"
                   />
                 </div>
