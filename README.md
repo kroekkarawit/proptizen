@@ -2,6 +2,8 @@
 
 https://github.com/kroekkarawit/proptizen/assets/127166944/01463836-c258-4ff6-b32e-19fca18339c4
 
+View page: [https://proptizen-roan.vercel.app](https://proptizen-roan.vercel.app)
+
 <h3>Screenshot</h3>
 
 ![screencapture-localhost-3000-Profile-Account-2024-02-29-19_20_20](https://github.com/kroekkarawit/proptizen/assets/127166944/cc5767ef-d04a-493d-95f0-375c2df1fdbf)
