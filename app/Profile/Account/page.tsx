@@ -1,8 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 import CardSideMenu from "@/components/CardSideMenu";
 import IconPhoto from "@/components/icons/IconPhoto";
@@ -12,8 +12,15 @@ import IconMail from "@/components/icons/IconMail";
 import IconError from "@/components/icons/IconError";
 import IconId from "@/components/icons/IconId";
 import IconLock from "@/components/icons/IconLock";
+import IconShieldCheck from "@/components/icons/IconShieldCheck";
+
 const Account = () => {
   const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const thaiNationalIdNumberVerify: string | null = searchParams.get(
+    "thaiNationalIdNumberVerify"
+  );
 
   return (
     <div className="pt-8 px-10 flex flex-row justify-center gap-x-10">
@@ -98,20 +105,47 @@ const Account = () => {
                 <span className="font-normal text-base text-primary">
                   Thai National ID
                 </span>
-                <div className="pt-1 flex">
-                  <IconError />
-                  <span className="font-normal text-sm text-secondary ml-1">
-                    Add your Thai National ID
-                  </span>
-                </div>
+                {thaiNationalIdNumberVerify &&
+                thaiNationalIdNumberVerify === "success" ? (
+                  <>
+                    <div className="pt-1 flex">
+                      <span className="font-normal text-sm text-secondary mr-2">
+                        375********826
+                      </span>
+                      <div className="border border-[#C8E6C9] bg-[#F1F8E9] flex h-[22px] w-[77px] rounded-full justify-center items-center">
+                        <IconShieldCheck />
+                        <span className="text=[#33691E] font-medium text-xs">
+                          Verified
+                        </span>
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <div className="pt-1 flex">
+                    <IconError />
+                    <span className="font-normal text-sm text-secondary ml-1">
+                      Add your Thai National ID
+                    </span>
+                  </div>
+                )}
               </div>
             </div>
-            <div
-              onClick={() => router.push("/Profile/Account/verify")}
-              className="bg-[#FFF3E0] border boder-[#FFE0B2] rounded-full py-2 px-4 h-9  text-[#E65100] font-medium text-sm inline-block align-middle cursor-pointer"
-            >
-              Verify Now
-            </div>
+
+            {thaiNationalIdNumberVerify &&
+            thaiNationalIdNumberVerify === "success" ? (
+              <>
+                <div className="bg-tertiary rounded-full py-2 px-4 h-9  text-primary font-medium text-sm inline-block align-middle ">
+                  Change
+                </div>
+              </>
+            ) : (
+              <div
+                onClick={() => router.push("/Profile/Account/verify")}
+                className="bg-[#FFF3E0] border boder-[#FFE0B2] rounded-full py-2 px-4 h-9  text-[#E65100] font-medium text-sm inline-block align-middle cursor-pointer"
+              >
+                Verify Now
+              </div>
+            )}
           </div>
         </div>
 

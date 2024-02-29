@@ -183,7 +183,14 @@ const Verify = () => {
                   </div>
 
                   <div className="px-16 flex flex-col w-full mt-6 mb-12	">
-                    <div className="bg-brand rounded-full h-12 w-full  justify-center items-center flex cursor-pointer" onClick={() => router.push("/Profile/Account?verify=success")}>
+                    <div
+                      className="bg-brand rounded-full h-12 w-full  justify-center items-center flex cursor-pointer"
+                      onClick={() =>
+                        router.push(
+                          "/Profile/Account?thaiNationalIdNumberVerify=success"
+                        )
+                      }
+                    >
                       <span className="text-[#FFFCFA]  text-base font-medium">
                         Continue to Prop
                       </span>
